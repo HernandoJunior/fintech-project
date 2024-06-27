@@ -22,7 +22,7 @@ body {
 }
 
 .firstPage { 
-  background: linear-gradient(to bottom, transparent 0%,  rgb(4, 28, 36) 45%), url(assets/background.png) no-repeat;
+  background: url(assets/background.png) no-repeat;
   background-size: 100vw;
 
   width: 100vw;
@@ -186,7 +186,7 @@ body {
   }
 
   > strong, h2, p {
-    color: var(--secondary-color);
+    color: var(--font-color-feature);
   }
 }
 
@@ -243,43 +243,134 @@ body {
   }
 }
 
-@media(max-width:426px){
+@media(max-width:500px){
+  
+  .firstPage {
+    background: linear-gradient(to bottom, transparent 0%,  rgb(4, 28, 36) 45%);
+    
+      > img {
+        display: none;
+        }
+  }
+
+  .containerHeader {
+    height: 15vh;
+    background-color: transparent;
+    justify-content: center;
+
+    > img {
+      filter: brightness(0.4);
+    }
+    > li {
+      display: none;
+    }
+
+    > .buttonsHeader {
+      display: none;
+    }
+  }
+
+  .welcomeSection {
+    color: var(--secondary-color);
+
+    text-align: center;
+    > p {
+      font-size: 1.2rem;
+
+      margin-top: 20px;
+    }
+
+    > h1 {
+      font-size: 3rem;
+    }
+
   .cardsSection {
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: 
     "card1";
   }
+  }
 
-  
+  .featuresClass{
+    width: 100vw;
+    text-align: center;
+
+    padding: 20px 0;
+
+    > strong {
+      font-size: 2rem;
+    }
+
+    > h2 {
+      font-size: 3rem;
+      margin-top: 15px;
+    }
+
+    > p {
+      font-size: 1.4rem;
+      margin-top: 15px;
+    }
+
+    > strong, h2, p {
+      color: var(--secondary-color);
+    }
+  }
+
+  .cardsSection {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas: "card1";
+  }
+}
+
+@media(min-width:768px){
   .firstPage {
     background: linear-gradient(to bottom, transparent 0%,  rgb(4, 28, 36) 45%);
+    
       > img {
         display: none;
         }
+  }
+
+  .featuresClass{
+    width: 100vw;
+    text-align: center;
+
+    padding: 20px 0;
+
+    > strong {
+      font-size: 2rem;
     }
+
+    > h2 {
+      font-size: 3rem;
+      margin-top: 15px;
+    }
+
+    > p {
+      font-size: 1.4rem;
+      margin-top: 15px;
+    }
+
+    > strong, h2, p {
+      color: var(--secondary-color);
+    }
+  }
 
   .containerHeader {
     background-color: transparent;
-    > li {
-      flex-direction: column;
-  
-      > ol {
-        font-size: .8rem;
-        > a {
-          color: var(--font-color-feature);
-        }
-      }
+    justify-content: space-between;
+
+    > img {
+      filter: brightness(0.4);
+    }
+    > li ol a {
+      color: var(--primary-color);
     }
 
-    >.buttonsHeader {
-      display: flex;
-      > button {
-        font-size: .8rem;
-      }
+    > .buttonsHeader button{
+      font-size: 1.2rem;
+      padding: 1rem;
     }
-    >img {
-      display: none;
-    }
-
   }
+
 }

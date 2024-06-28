@@ -108,7 +108,7 @@ body {
       background-color: #1C1C1C;
       color: #CAFF33;
     }
-
+    
   }
 }
 
@@ -243,7 +243,53 @@ body {
   }
 }
 
-@media(max-width:500px){
+.getStarted {
+  background: url(./assets/background2.png) no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10rem;
+  
+  border: 1px solid red;
+
+  > strong {
+    font-size: 5rem;
+    color: var(--tertiary-color);
+  }
+
+  > p {
+    font-size: 2rem;
+    color: var(--secondary-color);
+  }
+
+  > button {
+    background-color: #CAFF33;
+    
+    border: none;
+    color: #1C1C1C;
+    
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+
+  > button:hover{
+    background-color: #1C1C1C;
+    color: #CAFF33;
+  }
+}
+
+footer {
+  font-size: 2rem;
+  text-align: center;
+  opacity: .5;
+}
+
+@media(max-width:600px){
   
   .firstPage {
     background: linear-gradient(to bottom, transparent 0%,  rgb(4, 28, 36) 45%);
@@ -322,7 +368,7 @@ body {
   }
 }
 
-@media(min-width:768px){
+@media(max-width:768px){
   .firstPage {
     background: linear-gradient(to bottom, transparent 0%,  rgb(4, 28, 36) 45%);
     

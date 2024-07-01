@@ -342,15 +342,6 @@ footer {
 }
 
 @media(max-width:600px){
-  
-  .firstPage {
-    background: linear-gradient(to bottom, transparent 0%,  rgb(4, 28, 36) 45%);
-    
-      > img {
-        display: none;
-        }
-  }
-
   .containerHeader {
     height: 15vh;
     background-color: transparent;
@@ -417,6 +408,7 @@ footer {
   .cardsSection {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     > div ion-icon {
       display: none;
@@ -433,15 +425,7 @@ footer {
   }
 }
 
-@media(max-width:1000px){
-  .firstPage {
-    background: linear-gradient(to bottom, transparent 0%,  rgb(4, 28, 36) 45%);
-    
-      > img {
-        display: none;
-        }
-  }
-
+@media(max-width:950px){
   .featuresClass{
     width: 100vw;
     text-align: center;
@@ -469,35 +453,41 @@ footer {
 
   .containerHeader {
     background-color: transparent;
-    justify-content: space-between;
+    justify-content: space-around;
+
+    color: var(--secondary-color);
 
     > img {
       filter: brightness(0.4);
     }
+
     > li ol a {
-      color: var(--primary-color);
-    }
-
-    > .buttonsHeader button{
-      font-size: 1.2rem;
-      padding: 1rem;
-    }
-  }
-
-  .cardsSection {
-    grid-template-columns: repeat(3, 1fr);
-    > div ion-icon {
       display: none;
     }
-  }
 
-  .getStarted { 
-    margin-top: 400px;
-  }
+    > .buttonsHeader {
+      display: flex;
+      > button{
+        font-size: 1.2rem;
+        padding: 1rem;
 
-  .informationSection{
-    display: flex;
-    flex-direction: column;
-  }
-
+      } 
+      }
+    }
+    
+    .cardsSection {
+      grid-template-columns: repeat(3, 1fr);
+      > div ion-icon {
+        display: none;
+      }
+    }
+    
+    .getStarted { 
+      margin-top: 400px;
+    }
+    
+    .informationSection{
+      display: flex;
+      flex-direction: column;
+    }
 }

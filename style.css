@@ -14,6 +14,7 @@
 }
 
 body {
+
   font-family: 'Lexend', sans-serif;
   transition: 0.3s;
 
@@ -23,6 +24,7 @@ body {
 
 .firstPage { 
   background: url(assets/background.png) no-repeat;
+  background: linear-gradient(#043140 0%, #000B0F 100%);
   background-size: 100vw;
 
   width: 100vw;
@@ -186,29 +188,25 @@ body {
   }
 
   > strong, h2, p {
-    color: var(--font-color-feature);
+    color: var(--tertiary-color);
   }
 }
 
 .cardsSection {
-
-  height: 100vh;
+  
 
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-
-  grid-template-areas: 
-  "card1 card2 card3"
-  "card4 card5 card6";
+  grid-template-columns: repeat(4, .2fr);
+  justify-content: center;
 
 
-  gap: 20px;
-  padding: 20px;
+  gap: 10px;
 
   > .card{
     background-color: #222121;
+
+    max-width: 290px;
 
     border-radius: 10px;
     padding: 20px;
@@ -219,16 +217,15 @@ body {
     flex-direction: column;
     align-items: center;
 
+
     > * {
       color: var(--secondary-color);
 
       > ion-icon {
         font-size: 5rem;
-        color: var(--font-color-feature);
+        color: var(--tertiary-color);
 
-        border-radius: 50%;
         padding: 20px;
-        background-color: var(--tertiary-color);
         margin-bottom: 10px;
       }
       > h5 {
@@ -238,6 +235,9 @@ body {
       }
       > p{
         font-size: 1.5rem;
+      }
+      > button {
+        display: none;
       }
     }
   }
@@ -254,7 +254,6 @@ body {
   gap: 20px;
   padding: 10rem;
   
-  border: 1px solid red;
 
   > strong {
     font-size: 5rem;
@@ -280,6 +279,59 @@ body {
   > button:hover{
     background-color: #1C1C1C;
     color: #CAFF33;
+  }
+}
+
+.informationSection{
+  display: grid;
+
+  grid-template-areas: 
+  "div1 div2";
+  grid-template-columns: repeat(2, 1fr);
+  
+  color: var(--font-color-feature);
+  
+  margin: 0 15px;
+  border-radius: 10%;
+  gap: 20px;
+
+  > .socialMedia {
+    font-size: 4rem;
+    text-align: center;
+    background-color: rgba(237, 237, 237, 0.847);
+
+    padding: 20px;
+
+    > div a {
+      text-decoration: none;
+      color: var(--font-color-feature);
+    }
+  }
+
+  > form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(237, 237, 237, 0.847);
+
+    max-height: 500px;
+    > h2 {
+      font-size: 3rem;
+    }
+    
+    > p {
+      font-size: 2rem;
+    }
+
+    > .inputForm {
+      display: flex;
+      gap: 5px;
+
+      > input {
+        margin-right: 10px;
+      }
+    }
   }
 }
 
@@ -363,12 +415,25 @@ footer {
   }
 
   .cardsSection {
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-areas: "card1";
+    display: flex;
+    flex-direction: column;
+
+    > div ion-icon {
+      display: none;
+    }    
+  }
+
+  .getStarted { 
+    margin-top: 400px;
+  }
+
+  .informationSection{
+    display: flex;
+    flex-direction: column;
   }
 }
 
-@media(max-width:768px){
+@media(max-width:1000px){
   .firstPage {
     background: linear-gradient(to bottom, transparent 0%,  rgb(4, 28, 36) 45%);
     
@@ -417,6 +482,22 @@ footer {
       font-size: 1.2rem;
       padding: 1rem;
     }
+  }
+
+  .cardsSection {
+    grid-template-columns: repeat(3, 1fr);
+    > div ion-icon {
+      display: none;
+    }
+  }
+
+  .getStarted { 
+    margin-top: 400px;
+  }
+
+  .informationSection{
+    display: flex;
+    flex-direction: column;
   }
 
 }

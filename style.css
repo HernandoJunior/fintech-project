@@ -23,16 +23,13 @@ body {
 }
 
 .firstPage { 
-  background: url(assets/background.png) no-repeat;
-  background: linear-gradient(#043140 0%, #000B0F 100%);
-  background-size: 100vw;
+  background: #043140;
 
   width: 100vw;
 
 
   display: flex;
   flex-direction: column;
-  gap: 10rem;
 
   > #imgDetails{
     max-width: 70vw;
@@ -51,7 +48,8 @@ body {
   color: #FFF;
   
   width: 90vw;
-  margin: 0 auto;
+  margin: 0 auto 10rem;
+
   padding: 15px 0;
 
   display: flex;
@@ -117,7 +115,7 @@ body {
 .welcomeSection {
   color: var(--secondary-color);
 
-  margin: 0 auto;
+  margin: 0 auto 10rem;
 
   max-width: 800px;
 
@@ -171,6 +169,7 @@ body {
   width: 100vw;
   text-align: center;
 
+  margin-top: 10rem;
   padding: 20px 0;
 
   > strong {
@@ -193,8 +192,6 @@ body {
 }
 
 .cardsSection {
-  
-
   display: grid;
 
   grid-template-columns: repeat(4, .2fr);
@@ -247,6 +244,8 @@ body {
   background: url(./assets/background2.png) no-repeat;
   background-size: cover;
 
+  margin: 10rem 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -283,63 +282,103 @@ body {
 }
 
 .informationSection{
-  display: grid;
+  background-color: #02212c;
+  font-size: 1.5rem;
+  padding: 10px;
 
-  grid-template-areas: 
-  "div1 div2";
-  grid-template-columns: repeat(2, 1fr);
-  
-  color: var(--font-color-feature);
-  
-  margin: 0 15px;
-  border-radius: 10%;
-  gap: 20px;
+  font-weight: 500;
 
-  > .socialMedia {
-    font-size: 4rem;
-    text-align: center;
-    background-color: rgba(237, 237, 237, 0.847);
-
-    padding: 20px;
-
-    > div a {
-      text-decoration: none;
-      color: var(--font-color-feature);
-    }
+  * {
+    color: var(--secondary-color);
   }
 
-  > form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgba(237, 237, 237, 0.847);
+  button:hover{
+    color: var(--tertiary-color);
+  }
 
-    max-height: 500px;
-    > h2 {
-      font-size: 3rem;
+  > .buttonsContactUs {
+    background-color: transparent;
+
+    margin-left: 10px;
+    border: 1px solid var(--secondary-color);
+    padding: 10px;
+
+    font-weight: bold;
+  }
+}
+
+.informationAdd{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  margin: 5rem 0;
+  
+  > .adressAndSocialMedia {
+    margin: 0 auto;
+    > * {
+      color: var(--secondary-color);
+      font-size: 1.5rem;
     }
     
-    > p {
-      font-size: 2rem;
+    > img {
+      margin-bottom: 10px;
     }
 
-    > .inputForm {
-      display: flex;
-      gap: 5px;
+    > :nth-child(3) {
+      opacity: .3;
+      margin-top: 4rem;
+    }
 
-      > input {
-        margin-right: 10px;
+    > span ion-icon {
+      font-size: 3rem;
+      margin-left: 10px;
+    }
+
+    > span ion-icon:hover{
+      color: var(--tertiary-color);
+      cursor: pointer;
+    }
+
+  }
+
+  > .optionsAdd {
+    font-size: 1.5rem;
+
+    > p {
+      color: var(--secondary-color);
+      opacity: .3;
+    }
+    
+    > li {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      list-style: none;
+
+      > ol a {
+        text-decoration: none;
+        text-transform: none;
+
+        color: var(--secondary-color)
       }
+
+      > ol a:hover {
+      color: var(--tertiary-color);
+    }
     }
   }
 }
 
 footer {
+  background-color: #02212c;
+
+  color: var(--secondary-color);
   font-size: 2rem;
   text-align: center;
   opacity: .5;
 }
+
+  
 
 @media(max-width:600px){
   .containerHeader {

@@ -24,6 +24,7 @@ body {
 
 .firstPage { 
   background: linear-gradient(#043140 0%, #000B0F 100%);
+  
 
   width: 100vw;
 
@@ -377,8 +378,6 @@ footer {
   text-align: center;
   opacity: .5;
 }
-
-  
 
 @media(max-width:600px){
   .containerHeader {

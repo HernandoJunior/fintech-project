@@ -23,7 +23,7 @@ body {
 }
 
 .firstPage { 
-  background: #043140;
+  background: linear-gradient(#043140 0%, #000B0F 100%);
 
   width: 100vw;
 
@@ -282,9 +282,10 @@ body {
 }
 
 .informationSection{
-  background-color: #02212c;
+  border-bottom: 1px solid #C0C0C0;
+
   font-size: 1.5rem;
-  padding: 10px;
+  padding: 20px;
 
   font-weight: 500;
 
@@ -370,10 +371,9 @@ body {
 }
 
 footer {
-  background-color: #02212c;
 
   color: var(--secondary-color);
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   opacity: .5;
 }
@@ -462,6 +462,8 @@ footer {
     display: flex;
     flex-direction: column;
   }
+
+
 }
 
 @media(max-width:950px){
